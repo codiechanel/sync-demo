@@ -1,0 +1,27 @@
+{
+  "name": "simple-code",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify src/index.js -o public/dev.js -t [ babelify --presets [ es2015 react ] ]",
+    "sync": "cd public && browser-sync start --server --files '*'",
+    "sync2": "cd public && browser-sync start --server --files ''",
+    "pack": "webpack -d --progress --colors --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codiechanel/react-simple-boilerplate.git"
+  },
+  "author": "Codie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codiechanel/react-simple-boilerplate/issues"
+  },
+  "homepage": "https://github.com/codiechanel/react-simple-boilerplate#readme",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}
